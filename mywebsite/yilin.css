@@ -6,8 +6,7 @@ html {
 }
 body {
   margin: 0;
-  color: #373247;
-  background: #f5f0fa;
+  background: #f5f0fa; /* 全局统一底色，所有section和页面底色保持一致 */
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.7;
 }
@@ -21,72 +20,62 @@ main {
 }
 h1 {
   margin: 20px 0;
-  color: #76638f;
+  color: #4a3b5f; /* 主标题深色 */
   font-size: clamp(3.5rem, 10vw, 7rem);
   line-height: 0.95;
   letter-spacing: -0.06em;
 }
-/* 让 MY 和 PORTFOLIO 使用相同颜色 */
 h1 span {
   color: inherit;
 }
 .intro-text {
   max-width: 560px;
   font-size: 1.1rem;
+  color: #333333; /* 正文文字色 */
 }
-/* 各内容区域采用相同的间距和内边距 */
+/* 内容区域：去掉边框、圆角，背景和页面保持一样，无框 */
 .content-section {
   margin: 0 0 24px;
-  padding: 40px;
-  background: #fff;
-  border: 1px solid #ddd3e8;
-  border-radius: 18px;
+  padding: 40px 0;
+  background: transparent;
 }
 .section-label {
-  color: #76638f;
+  color: #4a3b5f;
   font-size: 0.78rem;
   letter-spacing: 0.14em;
   font-weight: bold;
 }
 .content-section h2 {
   margin: 12px 0 20px;
-  color: #76638f;
+  color: #4a3b5f;
   font-size: clamp(1.8rem, 5vw, 2.8rem);
   line-height: 1.2;
 }
 .content-section > p:not(.section-label) {
   max-width: 650px;
-  color: #625b6c;
-}
-.work-section {
-  background: #f0eaf7;
+  color: #333333;
 }
 .text-card {
   display: flex;
   gap: 22px;
   padding: 20px 0;
-  border-top: 1px solid #ddd3e8;
+  border-top: 1px solid #d3c8e2; /* 仅保留细分割线，不做外框 */
 }
 .text-card span {
-  color: #76638f;
+  color: #4a3b5f;
   font-size: 0.9rem;
 }
 .text-card h3 {
   margin: 0 0 4px;
-  color: #51456b;
+  color: #4a3b5f;
 }
 .text-card p {
   margin: 0;
-  color: #625b6c;
+  color: #333333;
 }
-.contact-section {
-  background: #f0eaf7;
-}
-.content-section:last-of-type {
-  background: #ffffff;
-}
+/* 删除单独板块背景色，全部统一，work-section / contact-section 不再设置背景 */
 
- (max-width: 600px) {
+@media (max-width: 600px) {
   main {
     width: 88%;
   }
@@ -94,6 +83,6 @@ h1 span {
     padding: 56px 0;
   }
   .content-section {
-    padding: 28px 24px;
+    padding: 28px 0;
   }
 }
