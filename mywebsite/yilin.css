@@ -1,11 +1,9 @@
 * {
   box-sizing: border-box;
 }
-
 html {
   scroll-behavior: smooth;
 }
-
 body {
   margin: 0;
   color: #373247;
@@ -13,161 +11,89 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.7;
 }
-
-.site-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 24px 8%;
-}
-
-.logo {
-  color: #51456b;
-  font-weight: bold;
-  text-decoration: none;
-  border: 1px solid #cfc1df;
-  border-radius: 50%;
-  padding: 8px 10px;
-}
-
-nav {
-  display: flex;
-  gap: 26px;
-}
-
-nav a {
-  color: #51456b;
-  text-decoration: none;
-  font-size: 0.95rem;
-}
-
-nav a:hover {
-  color: #927ab4;
-}
-
 main {
   width: min(850px, 84%);
   margin: 0 auto;
 }
-
+/* 首页大标题区域 */
 .intro {
-  padding: 100px 0 120px;
+  padding: 72px 0;
 }
-
-.eyebrow,
-.section-label {
-  color: #827297;
-  font-size: 0.78rem;
-  letter-spacing: 0.14em;
-  font-weight: bold;
-}
-
 h1 {
   margin: 20px 0;
-  color: #51456b;
+  color: #76638f;
   font-size: clamp(3.5rem, 10vw, 7rem);
   line-height: 0.95;
   letter-spacing: -0.06em;
 }
-
+/* 让 MY 和 PORTFOLIO 使用相同颜色 */
 h1 span {
-  color: #a58dc3;
+  color: inherit;
 }
-
 .intro-text {
   max-width: 560px;
   font-size: 1.1rem;
 }
-
-.button {
-  display: inline-block;
-  margin-top: 18px;
-  padding: 11px 18px;
-  color: #fff;
-  background: #8874a5;
-  border-radius: 24px;
-  text-decoration: none;
-}
-
-.button:hover {
-  background: #705c8e;
-}
-
+/* 各内容区域采用相同的间距和内边距 */
 .content-section {
-  margin: 0 0 28px;
-  padding: 48px;
+  margin: 0 0 24px;
+  padding: 40px;
   background: #fff;
-  border: 1px solid #e6ddef;
+  border: 1px solid #ddd3e8;
   border-radius: 18px;
 }
-
+.section-label {
+  color: #76638f;
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  font-weight: bold;
+}
 .content-section h2 {
   margin: 12px 0 20px;
-  color: #51456b;
+  color: #76638f;
   font-size: clamp(1.8rem, 5vw, 2.8rem);
   line-height: 1.2;
 }
-
 .content-section > p:not(.section-label) {
   max-width: 650px;
   color: #625b6c;
 }
-
 .work-section {
   background: #f0eaf7;
 }
-
 .text-card {
   display: flex;
   gap: 22px;
   padding: 20px 0;
-  border-top: 1px solid #d9cde5;
+  border-top: 1px solid #ddd3e8;
 }
-
 .text-card span {
-  color: #927ab4;
+  color: #76638f;
   font-size: 0.9rem;
 }
-
 .text-card h3 {
   margin: 0 0 4px;
   color: #51456b;
 }
-
 .text-card p {
   margin: 0;
   color: #625b6c;
 }
-
 .contact-section {
-  background: #f8f1ed;
+  background: #f0eaf7;
+}
+.content-section:last-of-type {
+  background: #ffffff;
 }
 
-footer {
-  padding: 28px 8%;
-  color: #827297;
-  text-align: center;
-  font-size: 0.85rem;
-}
-
-@media (max-width: 600px) {
-  .site-header {
-    padding: 20px 8%;
+ (max-width: 600px) {
+  main {
+    width: 88%;
   }
-
-  nav {
-    gap: 14px;
-  }
-
-  nav a {
-    font-size: 0.85rem;
-  }
-
   .intro {
-    padding: 70px 0 85px;
+    padding: 56px 0;
   }
-
   .content-section {
-    padding: 30px 24px;
+    padding: 28px 24px;
   }
 }
