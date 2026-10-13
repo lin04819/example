@@ -1,11 +1,9 @@
 * {
   box-sizing: border-box;
 }
-
 html {
   scroll-behavior: smooth;
 }
-
 body {
   margin: 0;
   color: #373247;
@@ -13,17 +11,14 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.7;
 }
-
 main {
   width: min(850px, 84%);
   margin: 0 auto;
 }
-
 /* 首页大标题区域 */
 .intro {
   padding: 72px 0;
 }
-
 h1 {
   margin: 20px 0;
   color: #76638f;
@@ -31,17 +26,14 @@ h1 {
   line-height: 0.95;
   letter-spacing: -0.06em;
 }
-
 /* 让 MY 和 PORTFOLIO 使用相同颜色 */
 h1 span {
   color: inherit;
 }
-
 .intro-text {
   max-width: 560px;
   font-size: 1.1rem;
 }
-
 /* 各内容区域采用相同的间距和内边距 */
 .content-section {
   margin: 0 0 24px;
@@ -50,65 +42,58 @@ h1 span {
   border: 1px solid #ddd3e8;
   border-radius: 18px;
 }
-
 .section-label {
   color: #76638f;
   font-size: 0.78rem;
   letter-spacing: 0.14em;
   font-weight: bold;
 }
-
 .content-section h2 {
   margin: 12px 0 20px;
   color: #76638f;
   font-size: clamp(1.8rem, 5vw, 2.8rem);
   line-height: 1.2;
 }
-
 .content-section > p:not(.section-label) {
   max-width: 650px;
   color: #625b6c;
 }
-
 .work-section {
   background: #f0eaf7;
 }
-
 .text-card {
   display: flex;
   gap: 22px;
   padding: 20px 0;
   border-top: 1px solid #ddd3e8;
 }
-
 .text-card span {
   color: #76638f;
   font-size: 0.9rem;
 }
-
 .text-card h3 {
   margin: 0 0 4px;
   color: #51456b;
 }
-
 .text-card p {
   margin: 0;
   color: #625b6c;
 }
-
 .contact-section {
   background: #f0eaf7;
 }
+/* 新增 REFLECTION 板块样式，和整体风格统一，白色底色，和about保持一致 */
+.content-section:last-of-type {
+  background: #ffffff;
+}
 
-@media (max-width: 600px) {
+ (max-width: 600px) {
   main {
     width: 88%;
   }
-
   .intro {
     padding: 56px 0;
   }
-
   .content-section {
     padding: 28px 24px;
   }
